@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
 const client = new Client({
     intents: [
@@ -24,4 +25,4 @@ client.on('messageCreate', async (message) => {
 	}
 });
 
-client.login('MTExNzAxNDcyNzEwMTUyNjAyNw.GXBlSI.coaBqQjMbs03_WQ36oFAvCZyofFNBTrbpx3MGU');
+client.login(process.env.BOT_TOKEN);
